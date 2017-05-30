@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html ng-app>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <script src="angular.js" charset="utf-8"></script>
     <title></title>
-  </head>
-  <body>
+</head>
+
+<body ng-init="hourOfDay = 9">
     <h1>Hello Angular!</h1>
-    <p ng-if="true">Good Morning!</p>
-  </body>
+    <p ng-if="hourOfDay < 12">Good Morning!</p>
+    <label>Click me: <input type="checkbox" ng-model="checked" ng-init="checked=true" /></label><br/> Show when checked:
+    <span ng-if="checked" class="animate-if">
+  This is removed when the checkbox is unchecked.
+</span>
+</body>
+
 </html>
